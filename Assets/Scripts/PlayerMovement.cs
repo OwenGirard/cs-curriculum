@@ -16,7 +16,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        XDir = Input.GetAxis("Horizonatal");
-        //XVector = XDir * WalkingSpeed * Time.DeltaTime
+        XDir = Input.GetAxis("Horizontal");
+        XVector = XDir * WalkingSpeed * Time.deltaTime;
+        transform.position = transform.position + new Vector3(XVector, 0f, 0f);
     }
 }
