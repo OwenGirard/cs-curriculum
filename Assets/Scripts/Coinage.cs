@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
  
-public class coinage : MonoBehaviour
+public class Coinage : MonoBehaviour
 {
-    public int coincount;
+    public int coins;
     // Start is called before the first frame update
     void Start()
     {
-        coincount = 0;
+        coins = 0;
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class coinage : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Coin"))
         {
-            coincount += 1;
+            coins += 1;
             other. gameObject.SetActive(false); 
         }
     }
