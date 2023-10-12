@@ -7,13 +7,14 @@ using UnityEngine.SceneManagement;
 
 public class Damage : MonoBehaviour
 {
-    public int health;
+    public HUD hud;
     private bool iFrames;
     private float iFrameTimer;
     // Start is called before the first frame update
     void Start()
     {
-        health = 3;
+        hud = GameObject.FindObjectOfType<HUD>();
+        
         iFrames = false;
         iFrameTimer = 1;
     }
@@ -46,8 +47,8 @@ public class Damage : MonoBehaviour
         if(!iFrames)
         {
             iFrames = true;
-            health += amount; 
-            if(health < 1);
+            hud.health += amount; 
+            if(hud.health < 1);
             {
                 //Death();
             }
