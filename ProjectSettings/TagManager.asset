@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Axe
   - Spikes
+  - Exit
   layers:
   - Default
   - TransparentFX
