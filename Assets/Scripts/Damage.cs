@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -16,7 +17,7 @@ public class Damage : MonoBehaviour
         hud = GameObject.FindObjectOfType<HUD>();
         
         iFrames = false;
-        iFrameTimer = 1;
+        iFrameTimer = 1f;
     }
 
     // Update is called once per frame
@@ -37,20 +38,29 @@ public class Damage : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Spikes"));
+        if (other.gameObject.CompareTag("Spikes"))
         {
             ChangeHealth(-1);
         }
+    }
+
+    void Death()
+    {
+        SceneManager.LoadScene("Start");
+        
+        iFrames = false;
+        iFrameTimer = 1f;
     }
     void ChangeHealth(int amount)
     {
         if(!iFrames)
         {
             iFrames = true;
-            hud.health += amount; 
-            if(hud.health < 1);
+            hud.health += amount;
+            if (hud.health < 1) 
             {
-                //Death();
+                hud.health = 3;
+                Death();
             }
 
         }
