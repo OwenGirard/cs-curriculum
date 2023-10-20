@@ -42,6 +42,16 @@ public class Damage : MonoBehaviour
         {
             ChangeHealth(-1);
         }
+
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Fireball")) 
+        {
+            ChangeHealth( -1);
+        }
     }
 
     void Death()
