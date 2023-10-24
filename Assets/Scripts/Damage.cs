@@ -48,7 +48,7 @@ public class Damage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Fireball")) 
+        if (other.gameObject.CompareTag("FireBall")) 
         {
             ChangeHealth( -1);
         }

@@ -7,7 +7,7 @@ public class FireBall : MonoBehaviour
 {
     private GameObject Player;
     public float moveSpeed = 5f;
-    public GameObject Fireball;
+    
 
     public Transform target;
     // Start is called before the first frame update
