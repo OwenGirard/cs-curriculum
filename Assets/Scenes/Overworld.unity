@@ -380,7 +380,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324223736}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -40302,7 +40302,26 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 324223737}
+    - targetCorrespondingSourceObject: {fileID: 6040774585044851471, guid: 54f2fe71921990e48b811a0b3b35835f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 922424919}
   m_SourcePrefab: {fileID: 100100000, guid: 54f2fe71921990e48b811a0b3b35835f, type: 3}
+--- !u!114 &922424919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324223736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee3f2faee4724bd9b9f3b3051671690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fireball: {fileID: 5790822057519619805, guid: d181d0f6b0e116b4298e1e64b89f707e,
+    type: 3}
+  Target: {fileID: 1750497391}
 --- !u!4 &1016716630 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4281311786053241907, guid: 69c7343f050914c7787bbbe42c07b5b8,
@@ -84705,6 +84724,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hud: {fileID: 0}
+--- !u!4 &1750497391 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 412193027009803671, guid: 34448014912494d33b041af48acd0291,
+    type: 3}
+  m_PrefabInstance: {fileID: 1750497383}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1825907749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4281311786053241907, guid: 69c7343f050914c7787bbbe42c07b5b8,

@@ -10,13 +10,16 @@ public class Tower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Target = null;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Target != null)
+        {
+            Instantiate(Fireball, transform.position, transform.rotation);
+        }
     }
 
 
@@ -24,7 +27,14 @@ public class Tower : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Instantiate(Fireball, transform.position, transform.rotation);
+            Target = other.gameObject.transform;
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Target = null;
         }
     }
 }
