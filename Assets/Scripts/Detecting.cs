@@ -15,7 +15,7 @@ public class trakingsystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 direction = (target.position = transform.position);
+        Vector2 direction = (target.position - transform.position);
         float angle = Mathf.Atan2(direction.y, direction.x);
         Vector2 newPosition = (Vector2)transform.position + direction.normalized * Time.deltaTime;
         transform.rotation = Quaternion.Euler(0, 0, angle * Mathf.Rad2Deg);

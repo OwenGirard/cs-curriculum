@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
-    private GameObject Player;
-    public float moveSpeed = 5f;
-    
+    public float moveSpeed;
+    public float waittodestroy = 1f;
 
     public Transform target;
     // Start is called before the first frame update
     void Start()
     {
-        //Target
+        moveSpeed = 5f;
+        Invoke("DestroyFireball",waittodestroy);
     }
 
     //OnTriggerEnter2D()
@@ -22,10 +22,19 @@ public class FireBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(
-            transform.position.x + (moveSpeed * Time.deltaTime),
-            transform.position.y,
-            transform.position.z
-        );
+       // transform.position = new Vector3(
+       //     transform.position.x + (moveSpeed * Time.deltaTime),
+        //    transform.position.y,
+       //     transform.position.z
+       // );
+       
+       transform.Translate(new Vector2(moveSpeed*Time.deltaTime, 0f));
     }
+
+    void DestroyFireball()
+    {
+        Destroy(gameObject);
+    }
+    
+    
 }
