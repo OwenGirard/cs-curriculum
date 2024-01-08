@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerFireBall : MonoBehaviour
 {
+    public GameObject fire;
     public float moveSpeed = 5f;
     // Start is called before the first frame update
     void Start()
@@ -14,8 +15,9 @@ public class PlayerFireBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+     if(Input.GetKeyDown("space"))
         {
-           // Instantiate(Fireball, transform.position, transform.rotation);
+            //Instantiate(fire.GetComponent(), transform.position, transform.rotation);
         }
         transform.position = new Vector3(
             transform.position.x + (moveSpeed * Time.deltaTime),
