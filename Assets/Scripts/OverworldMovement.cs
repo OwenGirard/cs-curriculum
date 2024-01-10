@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class OverworldMovement : MonoBehaviour
 {
     public int ySpeed;
+    public float fireballXmovement;
+    public float fireballYmovemnet;
 
-    public int xSpeed; 
+    public int xSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,3 +27,4 @@ public class OverworldMovement : MonoBehaviour
             (Input.GetAxis("Vertical") * ySpeed) * Time.deltaTime, 0);
     }
 }
+

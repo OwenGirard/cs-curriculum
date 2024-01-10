@@ -4,25 +4,31 @@ using UnityEngine;
 
 public class PlayerFireBall : MonoBehaviour
 {
-    public GameObject fire;
-    public float moveSpeed = 5f;
+    public GameObject playerFireBall;
+
+    public float firex;
+    public float firey;
+    public float firexvector;
+    public float fireyvector;
+    public float fireballspd;
     // Start is called before the first frame update
     void Start()
     {
-        
+        fireballspd = 5f;
     }
 
     // Update is called once per frame
     void Update()
     {
-     if(Input.GetKeyDown("space"))
+        firex = Input.GetAxis("Horizontal");
+        firey = Input.GetAxis("Vertical");
+        fireyvector = firey * fireballspd * Time.deltaTime;
+        firexvector = firex * fireballspd * Time.deltaTime;
+        if(Input.GetKeyDown("space"))
         {
-            //Instantiate(fire.GetComponent(), transform.position, transform.rotation);
+            Instantiate(playerFireBall, transform.position, transform.rotation);
         }
-        transform.position = new Vector3(
-            transform.position.x + (moveSpeed * Time.deltaTime),
-            transform.position.y,
-            transform.position.z
-        );
+
+     
     }
 }
