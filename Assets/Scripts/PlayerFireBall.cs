@@ -6,6 +6,8 @@ public class PlayerFireBall : MonoBehaviour
 {
     public GameObject playerFireBall;
 
+    public static PlayerFireBall cheese;
+    
     public float firex;
     public float firey;
     public float firexvector;
@@ -14,7 +16,7 @@ public class PlayerFireBall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fireballspd = 5f;
+        fireballspd = 10f;
     }
 
     // Update is called once per frame
@@ -22,13 +24,24 @@ public class PlayerFireBall : MonoBehaviour
     {
         firex = Input.GetAxis("Horizontal");
         firey = Input.GetAxis("Vertical");
-        fireyvector = firey * fireballspd * Time.deltaTime;
-        firexvector = firex * fireballspd * Time.deltaTime;
+
+        if (firex != 0)
+        {
+            firexvector = firex * fireballspd * Time.deltaTime;
+        }
+
+        if (firey != 0)
+        {
+            fireyvector = firey * fireballspd * Time.deltaTime;
+        }
+        
+        
         if(Input.GetKeyDown("space"))
         {
             Instantiate(playerFireBall, transform.position, transform.rotation);
         }
 
+        //Debug.Log(firex);
      
     }
 }
