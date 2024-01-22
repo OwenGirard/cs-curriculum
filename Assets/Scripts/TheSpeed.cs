@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TheSpeed : MonoBehaviour
 {
-    private PlayerFireBall cheese;
+    //private PlayerFireBall cheese;
 
     private float xspd;
 
@@ -12,9 +12,9 @@ public class TheSpeed : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cheese = GameObject.FindObjectOfType<PlayerFireBall>();
-        xspd = cheese.firexvector;
-        yspd = cheese.fireyvector;
+        //cheese = GameObject.FindObjectOfType<PlayerFireBall>();
+      //  xspd = cheese.firexvector;
+      //  yspd = cheese.fireyvector;
     }
 
     // Update is called once per frame
