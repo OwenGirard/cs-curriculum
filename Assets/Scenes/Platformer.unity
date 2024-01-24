@@ -154,8 +154,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inCaves: 1
-  xSpeed: 0
-  ySpeed: 0
+  xSpeed: 5
+  ySpeed: 5
+  Jumppowa: 0
 --- !u!1 &934382336
 GameObject:
   m_ObjectHideFlags: 0
@@ -3469,6 +3470,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3613895582600187363, guid: cddc0eae8679c4344b7e477729e7843b,
+        type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 1048576
       objectReference: {fileID: 0}
     - target: {fileID: 7386698514500486556, guid: cddc0eae8679c4344b7e477729e7843b,
         type: 3}
