@@ -21,7 +21,8 @@ public class Enum : MonoBehaviour
         {
             myDirection = direction.West;
         }
-        //if 
+
+        if (Input.GetKey(KeyCode.LeftArrow)) ;
     }
 
     
