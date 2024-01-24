@@ -21,7 +21,7 @@ public class Enum : MonoBehaviour
         {
             myDirection = direction.West;
         }
-        if 
+        //if 
     }
 
     

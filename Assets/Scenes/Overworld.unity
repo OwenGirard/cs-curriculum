@@ -84814,7 +84814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36161a936f7c94099901eeaecb6ccde2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerFireBall: {fileID: 0}
+  playerFireBall: {fileID: 5790822057519619805, guid: 856b0e84538e24879b0c150697011b3b,
+    type: 3}
   firex: 0
   firey: 0
   firexvector: 0
