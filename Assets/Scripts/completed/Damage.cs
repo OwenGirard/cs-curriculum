@@ -43,10 +43,14 @@ public class Damage : MonoBehaviour
             ChangeHealth(-1);
         }
         
-        if (other.gameObject.CompareTag("Fireball")) 
+        else if (other.gameObject.CompareTag("Fireball")) 
         {
             ChangeHealth( -1);
             other.gameObject.SetActive(false);
+        }
+        else if (other.gameObject.CompareTag("Supa deadly"))
+        {
+            ChangeHealth(-10);
         }
     }
 

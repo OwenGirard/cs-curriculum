@@ -14,23 +14,28 @@ public class PlayerMovement : MonoBehaviour
     public int ySpeed;
     public float Jumppowa;
     private Rigidbody2D m_Rigidbody;
-    private bool canjump;
-   // public Transform startpoint;
+    private bool canJumpLeft;
+    private bool canJumpRight;
     public float raylength;
+    public LayerMask groundlayer;
 
+    private float offset;
     // Start is called before the first frame update
     void Start()
     {
         if (inCaves)
         {
             ySpeed = 0;
-            Jumppowa = 200f;
+            Jumppowa = 5f;
+            raylength = 1f;
+
+            offset = 0.375f;
         }
 
         m_Rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    //public LayerMask groundlayer;
+   
 
 
     // Update is called once per frame
@@ -45,15 +50,18 @@ public class PlayerMovement : MonoBehaviour
         
         if (inCaves)
         {
-            canjump = Physics2D.Raycast(transform.position, Vector2.down, 1f);
-            Debug.DrawRay(transform.position, Vector2.down, Color.green);
+            canJumpLeft = Physics2D.Raycast(transform.position + new Vector3(-offset, 0f, 0f), Vector2.down, raylength, groundlayer);
+            canJumpLeft = Physics2D.Raycast(transform.position + new Vector3(offset, 0f, 0f), Vector2.down, raylength, groundlayer);
+            
+            Debug.DrawRay(transform.position + new Vector3(-offset, 0f, 0f), Vector2.down, Color.red);
+            Debug.DrawRay(transform.position + new Vector3(offset, 0f, 0f), Vector2.down, Color.green);
             if (Input.GetKeyDown("space") )
             {
                 print("space was pressd");
-                if (canjump)
+                if (canJumpLeft || canJumpRight)
                 {
                     Debug.Log("jumped");
-                    m_Rigidbody.AddForce(transform.up * Jumppowa);
+                    m_Rigidbody.AddForce( new Vector2(0f,Jumppowa), ForceMode2D.Impulse);
                 }
             }
         }
