@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
         if (inCaves)
         {
             canJumpLeft = Physics2D.Raycast(transform.position + new Vector3(-offset, 0f, 0f), Vector2.down, raylength, groundlayer);
-            canJumpLeft = Physics2D.Raycast(transform.position + new Vector3(offset, 0f, 0f), Vector2.down, raylength, groundlayer);
+            canJumpRight = Physics2D.Raycast(transform.position + new Vector3(offset, 0f, 0f), Vector2.down, raylength, groundlayer);
             
             Debug.DrawRay(transform.position + new Vector3(-offset, 0f, 0f), Vector2.down, Color.red);
             Debug.DrawRay(transform.position + new Vector3(offset, 0f, 0f), Vector2.down, Color.green);
