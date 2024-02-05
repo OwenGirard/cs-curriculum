@@ -157,6 +157,10 @@ MonoBehaviour:
   xSpeed: 5
   ySpeed: 5
   Jumppowa: 0
+  raylength: 0
+  groundlayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &934382336
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +175,7 @@ GameObject:
   - component: {fileID: 934382340}
   - component: {fileID: 934382339}
   - component: {fileID: 934382338}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
