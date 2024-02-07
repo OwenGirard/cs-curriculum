@@ -24,10 +24,10 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         if (inCaves)
-        {
+        { 
             ySpeed = 0;
             Jumppowa = 5f;
-            raylength = 1f;
+            raylength =.6f;
 
             offset = 0.375f;
         }
@@ -53,11 +53,11 @@ public class PlayerMovement : MonoBehaviour
             canJumpLeft = Physics2D.Raycast(transform.position + new Vector3(-offset, 0f, 0f), Vector2.down, raylength, groundlayer);
             canJumpRight = Physics2D.Raycast(transform.position + new Vector3(offset, 0f, 0f), Vector2.down, raylength, groundlayer);
             
-            Debug.DrawRay(transform.position + new Vector3(-offset, 0f, 0f), Vector2.down, Color.red);
-            Debug.DrawRay(transform.position + new Vector3(offset, 0f, 0f), Vector2.down, Color.green);
+            Debug.DrawRay(transform.position + new Vector3(-offset, 0f, 0f), Vector2.down * raylength, Color.red);
+            Debug.DrawRay(transform.position + new Vector3(offset, 0f, 0f), Vector2.down * raylength, Color.green);
             if (Input.GetKeyDown("space") )
             {
-                print("space was pressd");
+                Debug.Log("space was pressd");
                 if (canJumpLeft || canJumpRight)
                 {
                     Debug.Log("jumped");
