@@ -24,7 +24,7 @@ public class leverPlat : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void OnCollisionEnter(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -32,7 +32,7 @@ public class leverPlat : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision2D other)
+    private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
