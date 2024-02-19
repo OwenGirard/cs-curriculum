@@ -20,8 +20,8 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        void Update()
-        {
+        
+        
             
             
                 transform.position = Vector2.MoveTowards(transform.position, waypoints[Index],
@@ -52,6 +52,6 @@ public class Boss : MonoBehaviour
                     }
                 }
             
-        }
+        
     }
 }
