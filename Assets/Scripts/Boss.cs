@@ -13,7 +13,7 @@ public class Boss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 50f;
+        speed = 1f;
         transform.position = waypoints[Index];
     }
 
